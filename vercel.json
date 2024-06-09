@@ -10,8 +10,7 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "front-end/build"
-      },
-      "buildCommand": "npm run build && ls -la"
+      }   
     },
     {
       "src": "admin/package.json",
