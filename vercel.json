@@ -13,10 +13,10 @@
       }
     },
     {
-      "src": "admin/package.json",
+      "src": "admin",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "admin/dist"
+        "distDir": "dist"
       }
     }
   ],
