@@ -1,39 +1,40 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "api/index.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "front-end/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "front-end/build"
-        }
-      },
-      {
-        "src": "admin/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "admin/dist"
-        }
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "front-end/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "front-end/build"
       }
-    ],
-    "routes": [
-      { "handle": "filesystem" },
-      {
-        "src": "/api/(.*)",
-        "dest": "api/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "front-end/build/$1"
-      },     
-      {
-        "src": "/(.*)",
-        "dest": "admin/dist/$1"
+    },
+    {
+      "src": "admin/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "admin/dist"
       }
-    ]
-  }
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "/admin/dist/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/front-end/build/$1"
+    }
+  ]
+}
+
   
