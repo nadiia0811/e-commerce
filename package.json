@@ -4,20 +4,17 @@
     "description": "",
     "homepage": "https://nadiia0811.github.io/e-commerce",
     "scripts": {
-      "front-end": "npm start --prefix front-end",
-      "backend": "nodemon backend/index.js",
+      "backend": "nodemon api/index.js",
       "admin": "npm run dev --prefix admin",
-      "dev": "concurrently \"npm run front-end\" \"npm run backend\" \"npm run admin\"",
-      "build-frontend": "npm run build --prefix front-end",
+      "dev": "concurrently  \"npm run backend\" \"npm run admin\"",
       "build-admin": "npm run build --prefix admin",
-      "build": "npm run build-frontend && npm run build-admin",
-      "start": "NODE_ENV=production node backend/index.js"
+      "build": "npm run build-admin",
+      "start": "NODE_ENV=production node api/index.js"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
       "concurrently": "^8.2.2",
-      "gh-pages": "6.1.1",
       "nodemon": "^3.1.3"
     }
   }
