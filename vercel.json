@@ -11,7 +11,7 @@
       "config": {
         "distDir": "front-end/build"
       },
-      "build": "npm install && npm run build && ls -la"
+      "buildCommand": "npm run build && ls -la"
     },
     {
       "src": "admin/package.json",
