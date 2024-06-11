@@ -16,7 +16,7 @@
     ],
     "routes": [
       { "src": "/api/(.*)", "dest": "/api/index.js" },
-      { "src": "/admin/(.*)", "dest": "/admin/build/$1" },
+      { "src": "/admin/(.*)", "dest": "/admin/dist/$1" },
       { "src": "/(.*)", "dest": "/front-end/build/$1" }
     ]
   }
