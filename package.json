@@ -10,8 +10,7 @@
         "dev": "concurrently \"npm run backend\" \"npm run admin\" \"npm run front-end\"",
         "build-admin": "npm run build --prefix admin",
         "build-frontend": "npm run build --prefix front-end",
-        "build-backend": "echo 'No build step for backend'",
-        "build": "npm run build-admin && npm run build-frontend && npm run build-backend"
+        "build-backend": "echo 'No build step for backend'"
     },
     "author": "",
     "license": "ISC",
